@@ -9,21 +9,55 @@
 /* Begin PBXBuildFile section */
 		BE4C956225B5DA0C00EB2E96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4C956125B5DA0C00EB2E96 /* AppDelegate.swift */; };
 		BE4C956425B5DA0C00EB2E96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4C956325B5DA0C00EB2E96 /* SceneDelegate.swift */; };
-		BE4C956625B5DA0C00EB2E96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4C956525B5DA0C00EB2E96 /* ViewController.swift */; };
 		BE4C956925B5DA0C00EB2E96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE4C956725B5DA0C00EB2E96 /* Main.storyboard */; };
 		BE4C956B25B5DA0D00EB2E96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE4C956A25B5DA0D00EB2E96 /* Assets.xcassets */; };
 		BE4C956E25B5DA0D00EB2E96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE4C956C25B5DA0D00EB2E96 /* LaunchScreen.storyboard */; };
+		BE4C957C25B5DD8C00EB2E96 /* NewWorkerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4C957B25B5DD8C00EB2E96 /* NewWorkerViewController.swift */; };
+		BE4C958B25B5E29B00EB2E96 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4C958925B5E29B00EB2E96 /* NameTableViewCell.swift */; };
+		BE4C958C25B5E29B00EB2E96 /* NameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE4C958A25B5E29B00EB2E96 /* NameTableViewCell.xib */; };
+		BE4C959025B5E2DD00EB2E96 /* SurNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4C958E25B5E2DD00EB2E96 /* SurNameTableViewCell.swift */; };
+		BE4C959125B5E2DD00EB2E96 /* SurNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE4C958F25B5E2DD00EB2E96 /* SurNameTableViewCell.xib */; };
+		BE4C959625B5E31D00EB2E96 /* BirthDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4C959425B5E31D00EB2E96 /* BirthDayTableViewCell.swift */; };
+		BE4C959725B5E31D00EB2E96 /* BirthDayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE4C959525B5E31D00EB2E96 /* BirthDayTableViewCell.xib */; };
+		BE4C959B25B5E35600EB2E96 /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4C959925B5E35600EB2E96 /* CompanyTableViewCell.swift */; };
+		BE4C959C25B5E35600EB2E96 /* CompanyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE4C959A25B5E35600EB2E96 /* CompanyTableViewCell.xib */; };
+		BE4C95A025B5E3C900EB2E96 /* SaveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4C959E25B5E3C900EB2E96 /* SaveTableViewCell.swift */; };
+		BE4C95A125B5E3C900EB2E96 /* SaveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE4C959F25B5E3C900EB2E96 /* SaveTableViewCell.xib */; };
+		BE5F4C6C25B718D700EB5B8F /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4C6B25B718D700EB5B8F /* Enums.swift */; };
+		BE5F4C7225B7190000EB5B8F /* CellsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4C7125B7190000EB5B8F /* CellsData.swift */; };
+		BE5F4C7B25B71B5300EB5B8F /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4C7925B71B5300EB5B8F /* PhotoTableViewCell.swift */; };
+		BE5F4C7C25B71B5300EB5B8F /* PhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE5F4C7A25B71B5300EB5B8F /* PhotoTableViewCell.xib */; };
+		BE5F4C8025B71E2400EB5B8F /* SecondTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4C7F25B71E2400EB5B8F /* SecondTableViewController.swift */; };
+		BE5F4C8425B71E4700EB5B8F /* CompanyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4C8325B71E4700EB5B8F /* CompanyData.swift */; };
+		BE5F4C8725B7265E00EB5B8F /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4C8625B7265E00EB5B8F /* ProfileData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BE4C955E25B5DA0C00EB2E96 /* TestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE4C956125B5DA0C00EB2E96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE4C956325B5DA0C00EB2E96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BE4C956525B5DA0C00EB2E96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BE4C956825B5DA0C00EB2E96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE4C956A25B5DA0D00EB2E96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE4C956D25B5DA0D00EB2E96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE4C956F25B5DA0D00EB2E96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE4C957B25B5DD8C00EB2E96 /* NewWorkerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkerViewController.swift; sourceTree = "<group>"; };
+		BE4C958925B5E29B00EB2E96 /* NameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
+		BE4C958A25B5E29B00EB2E96 /* NameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameTableViewCell.xib; sourceTree = "<group>"; };
+		BE4C958E25B5E2DD00EB2E96 /* SurNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurNameTableViewCell.swift; sourceTree = "<group>"; };
+		BE4C958F25B5E2DD00EB2E96 /* SurNameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurNameTableViewCell.xib; sourceTree = "<group>"; };
+		BE4C959425B5E31D00EB2E96 /* BirthDayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthDayTableViewCell.swift; sourceTree = "<group>"; };
+		BE4C959525B5E31D00EB2E96 /* BirthDayTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BirthDayTableViewCell.xib; sourceTree = "<group>"; };
+		BE4C959925B5E35600EB2E96 /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
+		BE4C959A25B5E35600EB2E96 /* CompanyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyTableViewCell.xib; sourceTree = "<group>"; };
+		BE4C959E25B5E3C900EB2E96 /* SaveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTableViewCell.swift; sourceTree = "<group>"; };
+		BE4C959F25B5E3C900EB2E96 /* SaveTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SaveTableViewCell.xib; sourceTree = "<group>"; };
+		BE5F4C6B25B718D700EB5B8F /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		BE5F4C7125B7190000EB5B8F /* CellsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsData.swift; sourceTree = "<group>"; };
+		BE5F4C7925B71B5300EB5B8F /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
+		BE5F4C7A25B71B5300EB5B8F /* PhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoTableViewCell.xib; sourceTree = "<group>"; };
+		BE5F4C7F25B71E2400EB5B8F /* SecondTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewController.swift; sourceTree = "<group>"; };
+		BE5F4C8325B71E4700EB5B8F /* CompanyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyData.swift; sourceTree = "<group>"; };
+		BE5F4C8625B7265E00EB5B8F /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +92,62 @@
 			children = (
 				BE4C956125B5DA0C00EB2E96 /* AppDelegate.swift */,
 				BE4C956325B5DA0C00EB2E96 /* SceneDelegate.swift */,
-				BE4C956525B5DA0C00EB2E96 /* ViewController.swift */,
 				BE4C956725B5DA0C00EB2E96 /* Main.storyboard */,
+				BE5F4C7425B7190D00EB5B8F /* Model */,
+				BE4C958725B5E24500EB2E96 /* View */,
+				BE5F4C7725B71B3800EB5B8F /* Controller */,
+				BE5F4C6E25B718DA00EB5B8F /* Enums */,
 				BE4C956A25B5DA0D00EB2E96 /* Assets.xcassets */,
 				BE4C956C25B5DA0D00EB2E96 /* LaunchScreen.storyboard */,
 				BE4C956F25B5DA0D00EB2E96 /* Info.plist */,
 			);
 			path = TestTask;
+			sourceTree = "<group>";
+		};
+		BE4C958725B5E24500EB2E96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BE5F4C7925B71B5300EB5B8F /* PhotoTableViewCell.swift */,
+				BE5F4C7A25B71B5300EB5B8F /* PhotoTableViewCell.xib */,
+				BE4C958925B5E29B00EB2E96 /* NameTableViewCell.swift */,
+				BE4C958A25B5E29B00EB2E96 /* NameTableViewCell.xib */,
+				BE4C958E25B5E2DD00EB2E96 /* SurNameTableViewCell.swift */,
+				BE4C958F25B5E2DD00EB2E96 /* SurNameTableViewCell.xib */,
+				BE4C959425B5E31D00EB2E96 /* BirthDayTableViewCell.swift */,
+				BE4C959525B5E31D00EB2E96 /* BirthDayTableViewCell.xib */,
+				BE4C959925B5E35600EB2E96 /* CompanyTableViewCell.swift */,
+				BE4C959A25B5E35600EB2E96 /* CompanyTableViewCell.xib */,
+				BE4C959E25B5E3C900EB2E96 /* SaveTableViewCell.swift */,
+				BE4C959F25B5E3C900EB2E96 /* SaveTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BE5F4C6E25B718DA00EB5B8F /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				BE5F4C6B25B718D700EB5B8F /* Enums.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		BE5F4C7425B7190D00EB5B8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE5F4C7125B7190000EB5B8F /* CellsData.swift */,
+				BE5F4C8625B7265E00EB5B8F /* ProfileData.swift */,
+				BE5F4C8325B71E4700EB5B8F /* CompanyData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE5F4C7725B71B3800EB5B8F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BE4C957B25B5DD8C00EB2E96 /* NewWorkerViewController.swift */,
+				BE5F4C7F25B71E2400EB5B8F /* SecondTableViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +208,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE4C956E25B5DA0D00EB2E96 /* LaunchScreen.storyboard in Resources */,
+				BE4C959125B5E2DD00EB2E96 /* SurNameTableViewCell.xib in Resources */,
 				BE4C956B25B5DA0D00EB2E96 /* Assets.xcassets in Resources */,
+				BE4C959C25B5E35600EB2E96 /* CompanyTableViewCell.xib in Resources */,
+				BE4C95A125B5E3C900EB2E96 /* SaveTableViewCell.xib in Resources */,
 				BE4C956925B5DA0C00EB2E96 /* Main.storyboard in Resources */,
+				BE5F4C7C25B71B5300EB5B8F /* PhotoTableViewCell.xib in Resources */,
+				BE4C958C25B5E29B00EB2E96 /* NameTableViewCell.xib in Resources */,
+				BE4C959725B5E31D00EB2E96 /* BirthDayTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,9 +226,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE4C956625B5DA0C00EB2E96 /* ViewController.swift in Sources */,
+				BE4C95A025B5E3C900EB2E96 /* SaveTableViewCell.swift in Sources */,
+				BE5F4C8025B71E2400EB5B8F /* SecondTableViewController.swift in Sources */,
 				BE4C956225B5DA0C00EB2E96 /* AppDelegate.swift in Sources */,
 				BE4C956425B5DA0C00EB2E96 /* SceneDelegate.swift in Sources */,
+				BE5F4C8425B71E4700EB5B8F /* CompanyData.swift in Sources */,
+				BE4C959025B5E2DD00EB2E96 /* SurNameTableViewCell.swift in Sources */,
+				BE4C957C25B5DD8C00EB2E96 /* NewWorkerViewController.swift in Sources */,
+				BE5F4C7225B7190000EB5B8F /* CellsData.swift in Sources */,
+				BE4C958B25B5E29B00EB2E96 /* NameTableViewCell.swift in Sources */,
+				BE5F4C8725B7265E00EB5B8F /* ProfileData.swift in Sources */,
+				BE4C959625B5E31D00EB2E96 /* BirthDayTableViewCell.swift in Sources */,
+				BE5F4C6C25B718D700EB5B8F /* Enums.swift in Sources */,
+				BE4C959B25B5E35600EB2E96 /* CompanyTableViewCell.swift in Sources */,
+				BE5F4C7B25B71B5300EB5B8F /* PhotoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
