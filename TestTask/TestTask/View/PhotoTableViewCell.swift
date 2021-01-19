@@ -23,17 +23,13 @@ class PhotoTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         
-        
-        
-      
-        
     }
-  
-    
+
+
     @IBAction func buttonPress(_ sender: UIButton) {
         if let imageUrl = URL(string: "https://picsum.photos/200") {
             self.avatarImageView.load(url: imageUrl, indicator: activityIndicator)
-            //newImageView = avatarImageView
+            
         }
         delegate?.buttonPressed(cell: self)
     }

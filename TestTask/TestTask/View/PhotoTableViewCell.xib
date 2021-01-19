@@ -18,12 +18,13 @@
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbg-QG-DZ2">
                         <rect key="frame" x="0.0" y="18.5" width="361" height="138"/>
+                        <state key="normal" title="Your avatar click!"/>
                         <connections>
                             <action selector="buttonPress:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="urK-vG-Ltj"/>
                         </connections>
                     </button>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Lzu-kR-mio">
-                        <rect key="frame" x="93" y="1.5" width="175" height="172.5"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lzu-kR-mio">
+                        <rect key="frame" x="93" y="0.0" width="175" height="175"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Lzu-kR-mio" secondAttribute="height" multiplier="1:1" id="uKl-RD-Nuf"/>
                         </constraints>
@@ -54,7 +55,4 @@
             <point key="canvasLocation" x="-489.13043478260875" y="114.50892857142857"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="person" catalog="system" width="128" height="117"/>
-    </resources>
 </document>

@@ -23,12 +23,15 @@
 		BE4C959C25B5E35600EB2E96 /* CompanyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE4C959A25B5E35600EB2E96 /* CompanyTableViewCell.xib */; };
 		BE4C95A025B5E3C900EB2E96 /* SaveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4C959E25B5E3C900EB2E96 /* SaveTableViewCell.swift */; };
 		BE4C95A125B5E3C900EB2E96 /* SaveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE4C959F25B5E3C900EB2E96 /* SaveTableViewCell.xib */; };
+		BE4F4ADB25B75E8A00D4E4D0 /* ListStaffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F4ADA25B75E8A00D4E4D0 /* ListStaffViewController.swift */; };
+		BE4F4AE625B7616A00D4E4D0 /* StaffTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F4AE425B7616A00D4E4D0 /* StaffTableViewCell.swift */; };
+		BE4F4AE725B7616A00D4E4D0 /* StaffTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE4F4AE525B7616A00D4E4D0 /* StaffTableViewCell.xib */; };
+		BE4F4AEC25B77E3300D4E4D0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F4AEB25B77E3300D4E4D0 /* DetailViewController.swift */; };
 		BE5F4C6C25B718D700EB5B8F /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4C6B25B718D700EB5B8F /* Enums.swift */; };
 		BE5F4C7225B7190000EB5B8F /* CellsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4C7125B7190000EB5B8F /* CellsData.swift */; };
 		BE5F4C7B25B71B5300EB5B8F /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4C7925B71B5300EB5B8F /* PhotoTableViewCell.swift */; };
 		BE5F4C7C25B71B5300EB5B8F /* PhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE5F4C7A25B71B5300EB5B8F /* PhotoTableViewCell.xib */; };
 		BE5F4C8025B71E2400EB5B8F /* SecondTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4C7F25B71E2400EB5B8F /* SecondTableViewController.swift */; };
-		BE5F4C8425B71E4700EB5B8F /* CompanyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4C8325B71E4700EB5B8F /* CompanyData.swift */; };
 		BE5F4C8725B7265E00EB5B8F /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4C8625B7265E00EB5B8F /* ProfileData.swift */; };
 		BE5F4C8C25B72B5B00EB5B8F /* WorkerEntity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4C8A25B72B5B00EB5B8F /* WorkerEntity.xcdatamodeld */; };
 		BE5F4C9925B7308400EB5B8F /* Extension + UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4C9825B7308400EB5B8F /* Extension + UIImageView.swift */; };
@@ -53,12 +56,15 @@
 		BE4C959A25B5E35600EB2E96 /* CompanyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyTableViewCell.xib; sourceTree = "<group>"; };
 		BE4C959E25B5E3C900EB2E96 /* SaveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTableViewCell.swift; sourceTree = "<group>"; };
 		BE4C959F25B5E3C900EB2E96 /* SaveTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SaveTableViewCell.xib; sourceTree = "<group>"; };
+		BE4F4ADA25B75E8A00D4E4D0 /* ListStaffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStaffViewController.swift; sourceTree = "<group>"; };
+		BE4F4AE425B7616A00D4E4D0 /* StaffTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffTableViewCell.swift; sourceTree = "<group>"; };
+		BE4F4AE525B7616A00D4E4D0 /* StaffTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StaffTableViewCell.xib; sourceTree = "<group>"; };
+		BE4F4AEB25B77E3300D4E4D0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BE5F4C6B25B718D700EB5B8F /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		BE5F4C7125B7190000EB5B8F /* CellsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsData.swift; sourceTree = "<group>"; };
 		BE5F4C7925B71B5300EB5B8F /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
 		BE5F4C7A25B71B5300EB5B8F /* PhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoTableViewCell.xib; sourceTree = "<group>"; };
 		BE5F4C7F25B71E2400EB5B8F /* SecondTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewController.swift; sourceTree = "<group>"; };
-		BE5F4C8325B71E4700EB5B8F /* CompanyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyData.swift; sourceTree = "<group>"; };
 		BE5F4C8625B7265E00EB5B8F /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
 		BE5F4C8B25B72B5B00EB5B8F /* WorkerEntity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WorkerEntity.xcdatamodel; sourceTree = "<group>"; };
 		BE5F4C9225B72E8000EB5B8F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -125,6 +131,8 @@
 				BE4C959A25B5E35600EB2E96 /* CompanyTableViewCell.xib */,
 				BE4C959E25B5E3C900EB2E96 /* SaveTableViewCell.swift */,
 				BE4C959F25B5E3C900EB2E96 /* SaveTableViewCell.xib */,
+				BE4F4AE425B7616A00D4E4D0 /* StaffTableViewCell.swift */,
+				BE4F4AE525B7616A00D4E4D0 /* StaffTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -142,7 +150,6 @@
 			children = (
 				BE5F4C7125B7190000EB5B8F /* CellsData.swift */,
 				BE5F4C8625B7265E00EB5B8F /* ProfileData.swift */,
-				BE5F4C8325B71E4700EB5B8F /* CompanyData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -152,6 +159,8 @@
 			children = (
 				BE4C957B25B5DD8C00EB2E96 /* NewWorkerViewController.swift */,
 				BE5F4C7F25B71E2400EB5B8F /* SecondTableViewController.swift */,
+				BE4F4ADA25B75E8A00D4E4D0 /* ListStaffViewController.swift */,
+				BE4F4AEB25B77E3300D4E4D0 /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -253,6 +262,7 @@
 				BE4C959C25B5E35600EB2E96 /* CompanyTableViewCell.xib in Resources */,
 				BE4C95A125B5E3C900EB2E96 /* SaveTableViewCell.xib in Resources */,
 				BE4C956925B5DA0C00EB2E96 /* Main.storyboard in Resources */,
+				BE4F4AE725B7616A00D4E4D0 /* StaffTableViewCell.xib in Resources */,
 				BE5F4C7C25B71B5300EB5B8F /* PhotoTableViewCell.xib in Resources */,
 				BE4C958C25B5E29B00EB2E96 /* NameTableViewCell.xib in Resources */,
 				BE4C959725B5E31D00EB2E96 /* BirthDayTableViewCell.xib in Resources */,
@@ -267,13 +277,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE4C95A025B5E3C900EB2E96 /* SaveTableViewCell.swift in Sources */,
+				BE4F4ADB25B75E8A00D4E4D0 /* ListStaffViewController.swift in Sources */,
 				BE5F4C9925B7308400EB5B8F /* Extension + UIImageView.swift in Sources */,
 				BE5F4C8C25B72B5B00EB5B8F /* WorkerEntity.xcdatamodeld in Sources */,
+				BE4F4AE625B7616A00D4E4D0 /* StaffTableViewCell.swift in Sources */,
 				BE5F4C8025B71E2400EB5B8F /* SecondTableViewController.swift in Sources */,
 				BE4C956225B5DA0C00EB2E96 /* AppDelegate.swift in Sources */,
 				BE4C956425B5DA0C00EB2E96 /* SceneDelegate.swift in Sources */,
-				BE5F4C8425B71E4700EB5B8F /* CompanyData.swift in Sources */,
 				BE4C959025B5E2DD00EB2E96 /* SurNameTableViewCell.swift in Sources */,
+				BE4F4AEC25B77E3300D4E4D0 /* DetailViewController.swift in Sources */,
 				BE4C957C25B5DD8C00EB2E96 /* NewWorkerViewController.swift in Sources */,
 				BE5F4C7225B7190000EB5B8F /* CellsData.swift in Sources */,
 				BE4C958B25B5E29B00EB2E96 /* NameTableViewCell.swift in Sources */,

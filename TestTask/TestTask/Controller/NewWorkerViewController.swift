@@ -92,7 +92,7 @@ class NewWorkerViewController: UITableViewController {
         case .label:
             let cell = tableView.dequeueReusableCell(withIdentifier: "companyCell") as! CompanyTableViewCell
             cell.accessoryType = .disclosureIndicator
-            cell.configure(someName: nameOfCompany)
+            cell.configure(someName: profileData.company ?? "Выберите компанию")
             return cell
         case .button:
             let cell = tableView.dequeueReusableCell(withIdentifier: "saveCell") as! SaveTableViewCell
@@ -106,7 +106,7 @@ class NewWorkerViewController: UITableViewController {
         case .image:
             return 200
         default:
-            return 40
+            return 50
         }
     }
     
@@ -116,7 +116,7 @@ class NewWorkerViewController: UITableViewController {
         case .label:
             let vc = storyboard?.instantiateViewController(identifier: "secondVC") as! SecondTableViewController
             vc.onFinish = { (backNameOfCompany) in
-                self.nameOfCompany = backNameOfCompany
+                self.profileData.company = backNameOfCompany
                 tableView.reloadData()
                 print(self.nameOfCompany)
             }
@@ -129,7 +129,7 @@ class NewWorkerViewController: UITableViewController {
     }
     
 }
-    
+
 extension NewWorkerViewController: PhotoCellDelegate {
     func buttonPressed(cell: PhotoTableViewCell) {
         tableView.reloadData()
@@ -142,33 +142,41 @@ extension NewWorkerViewController: PhotoCellDelegate {
 extension NewWorkerViewController: SaveCellDelegate {
     func sharePressed(cell: SaveTableViewCell) {
         //guard let index = tableView.indexPath(for: cell)?.row else { return }
-        print("hello")
-        let alert = UIAlertController(title: "Successfully!", message: "Ваши данные сохранены", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        alert.addAction(action)
-        present(alert, animated: true, completion: nil)
         
-        
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let workerEntity = WorkerEntity(context: context)
-        workerEntity.name = profileData.name
-        workerEntity.secondName = profileData.surName
-        workerEntity.birthday = profileData.birthDay
-        workerEntity.company = nameOfCompany
-        if let imageData = savedImageView.image?.pngData() {
-            workerEntity.newImage = imageData
+        if let name = profileData.name, let surName = profileData.surName, let birthday = profileData.birthDay, let company = profileData.company {
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let workerEntity = WorkerEntity(context: context)
+            workerEntity.name = name
+            workerEntity.secondName = surName
+            workerEntity.birthday = birthday
+            workerEntity.company = company
+            if let imageData = savedImageView.image?.pngData() {
+                workerEntity.newImage = imageData
+            }
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            
+            let alert = UIAlertController(title: "Successfully!", message: "Ваши данные сохранены", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .default) { (_) in
+                self.navigationController?.popViewController(animated: true)
+            }
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+            
+        } else {
+            let alert = UIAlertController(title: "Error", message: "Вы указали не все данные", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Try again", style: .default, handler: nil)
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+            
         }
-        (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
-//        if let imageData = savedImageView.image?.pngData() {
-//            DataBaseHelper.shareInstance.saveImage(data: imageData)
-//        }
+        
     }
 }
 
 extension NewWorkerViewController : UITextFieldDelegate {
     
-
+    
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.addTarget(self, action: #selector(valueChanged), for: .editingChanged)
