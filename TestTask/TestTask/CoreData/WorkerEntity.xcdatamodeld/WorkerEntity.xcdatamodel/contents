@@ -5,9 +5,10 @@
         <attribute name="company" optional="YES" attributeType="String"/>
         <attribute name="image" optional="YES" attributeType="URI"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="newImage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="secondName" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="WorkerEntity" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="WorkerEntity" positionX="-63" positionY="-18" width="128" height="133"/>
     </elements>
 </model>

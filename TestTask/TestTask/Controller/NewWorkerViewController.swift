@@ -12,7 +12,7 @@ class NewWorkerViewController: UITableViewController {
     var data: [CellsData] = []
     var profileData = ProfileData()
     var nameOfCompany: String = ""
-    
+    var savedImageView = UIImageView()
     
     
     override func viewDidLoad() {
@@ -63,6 +63,12 @@ class NewWorkerViewController: UITableViewController {
         switch currentData.type {
         case .image:
             let cell = tableView.dequeueReusableCell(withIdentifier: "photoCell") as! PhotoTableViewCell
+            cell.delegate = self
+            if let newImage = cell.avatarImageView?.image {
+                savedImageView.image = newImage
+                //print(savedImageView.image)
+            }
+            
             
             return cell
         case .textInput:
@@ -98,7 +104,7 @@ class NewWorkerViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch data[indexPath.row].type {
         case .image:
-            return 150
+            return 200
         default:
             return 40
         }
@@ -123,6 +129,15 @@ class NewWorkerViewController: UITableViewController {
     }
     
 }
+    
+extension NewWorkerViewController: PhotoCellDelegate {
+    func buttonPressed(cell: PhotoTableViewCell) {
+        tableView.reloadData()
+    }
+    
+    
+}
+
 
 extension NewWorkerViewController: SaveCellDelegate {
     func sharePressed(cell: SaveTableViewCell) {
@@ -140,7 +155,14 @@ extension NewWorkerViewController: SaveCellDelegate {
         workerEntity.secondName = profileData.surName
         workerEntity.birthday = profileData.birthDay
         workerEntity.company = nameOfCompany
+        if let imageData = savedImageView.image?.pngData() {
+            workerEntity.newImage = imageData
+        }
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+//        if let imageData = savedImageView.image?.pngData() {
+//            DataBaseHelper.shareInstance.saveImage(data: imageData)
+//        }
     }
 }
 

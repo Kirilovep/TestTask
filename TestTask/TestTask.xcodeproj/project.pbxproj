@@ -31,6 +31,7 @@
 		BE5F4C8425B71E4700EB5B8F /* CompanyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4C8325B71E4700EB5B8F /* CompanyData.swift */; };
 		BE5F4C8725B7265E00EB5B8F /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4C8625B7265E00EB5B8F /* ProfileData.swift */; };
 		BE5F4C8C25B72B5B00EB5B8F /* WorkerEntity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4C8A25B72B5B00EB5B8F /* WorkerEntity.xcdatamodeld */; };
+		BE5F4C9925B7308400EB5B8F /* Extension + UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4C9825B7308400EB5B8F /* Extension + UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		BE5F4C8625B7265E00EB5B8F /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
 		BE5F4C8B25B72B5B00EB5B8F /* WorkerEntity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WorkerEntity.xcdatamodel; sourceTree = "<group>"; };
 		BE5F4C9225B72E8000EB5B8F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BE5F4C9825B7308400EB5B8F /* Extension + UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIImageView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,16 +96,15 @@
 		BE4C956025B5DA0C00EB2E96 /* TestTask */ = {
 			isa = PBXGroup;
 			children = (
-				BE4C956125B5DA0C00EB2E96 /* AppDelegate.swift */,
-				BE4C956325B5DA0C00EB2E96 /* SceneDelegate.swift */,
-				BE4C956725B5DA0C00EB2E96 /* Main.storyboard */,
-				BE5F4C8E25B72B6800EB5B8F /* CoreData */,
+				BE5F4CAA25B7465100EB5B8F /* Application */,
 				BE5F4C7425B7190D00EB5B8F /* Model */,
 				BE4C958725B5E24500EB2E96 /* View */,
 				BE5F4C7725B71B3800EB5B8F /* Controller */,
 				BE5F4C6E25B718DA00EB5B8F /* Enums */,
-				BE4C956A25B5DA0D00EB2E96 /* Assets.xcassets */,
+				BE5F4C8E25B72B6800EB5B8F /* CoreData */,
+				BE5F4CA625B7463400EB5B8F /* Extensions */,
 				BE4C956C25B5DA0D00EB2E96 /* LaunchScreen.storyboard */,
+				BE4C956A25B5DA0D00EB2E96 /* Assets.xcassets */,
 				BE4C956F25B5DA0D00EB2E96 /* Info.plist */,
 			);
 			path = TestTask;
@@ -169,6 +170,24 @@
 				BE5F4C9225B72E8000EB5B8F /* CoreData.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE5F4CA625B7463400EB5B8F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BE5F4C9825B7308400EB5B8F /* Extension + UIImageView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BE5F4CAA25B7465100EB5B8F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				BE4C956125B5DA0C00EB2E96 /* AppDelegate.swift */,
+				BE4C956325B5DA0C00EB2E96 /* SceneDelegate.swift */,
+				BE4C956725B5DA0C00EB2E96 /* Main.storyboard */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE4C95A025B5E3C900EB2E96 /* SaveTableViewCell.swift in Sources */,
+				BE5F4C9925B7308400EB5B8F /* Extension + UIImageView.swift in Sources */,
 				BE5F4C8C25B72B5B00EB5B8F /* WorkerEntity.xcdatamodeld in Sources */,
 				BE5F4C8025B71E2400EB5B8F /* SecondTableViewController.swift in Sources */,
 				BE4C956225B5DA0C00EB2E96 /* AppDelegate.swift in Sources */,

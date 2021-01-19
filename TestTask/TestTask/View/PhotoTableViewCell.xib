@@ -9,29 +9,49 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="photoCell" rowHeight="155" id="KGk-i7-Jjw" customClass="PhotoTableViewCell" customModule="TestTask" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="361" height="155"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="photoCell" rowHeight="200" id="KGk-i7-Jjw" customClass="PhotoTableViewCell" customModule="TestTask" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="361" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="361" height="155"/>
+                <rect key="frame" x="0.0" y="0.0" width="361" height="200"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbg-QG-DZ2">
+                        <rect key="frame" x="0.0" y="18.5" width="361" height="138"/>
+                        <connections>
+                            <action selector="buttonPress:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="urK-vG-Ltj"/>
+                        </connections>
+                    </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Lzu-kR-mio">
-                        <rect key="frame" x="0.0" y="1.5" width="361" height="152.5"/>
+                        <rect key="frame" x="93" y="1.5" width="175" height="172.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Lzu-kR-mio" secondAttribute="height" multiplier="1:1" id="uKl-RD-Nuf"/>
+                        </constraints>
                     </imageView>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="4fM-BC-VeJ">
+                        <rect key="frame" x="162" y="164" width="37" height="36"/>
+                    </activityIndicatorView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Lzu-kR-mio" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="PT3-EU-cE9"/>
-                    <constraint firstItem="Lzu-kR-mio" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="g5a-xC-iGD"/>
-                    <constraint firstAttribute="bottom" secondItem="Lzu-kR-mio" secondAttribute="bottom" id="gc8-NJ-hQk"/>
-                    <constraint firstAttribute="trailing" secondItem="Lzu-kR-mio" secondAttribute="trailing" id="zlg-Ii-jcn"/>
+                    <constraint firstAttribute="bottom" secondItem="Lzu-kR-mio" secondAttribute="bottom" constant="25" id="FQD-Qh-ycw"/>
+                    <constraint firstItem="Lzu-kR-mio" firstAttribute="centerX" secondItem="qbg-QG-DZ2" secondAttribute="centerX" id="Gg2-V1-1Xp"/>
+                    <constraint firstAttribute="trailing" secondItem="4fM-BC-VeJ" secondAttribute="trailing" constant="162" id="Mtj-41-ELH"/>
+                    <constraint firstAttribute="bottom" secondItem="4fM-BC-VeJ" secondAttribute="bottom" id="PpD-As-XHv"/>
+                    <constraint firstItem="4fM-BC-VeJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="162" id="QBX-fM-NJT"/>
+                    <constraint firstItem="Lzu-kR-mio" firstAttribute="centerY" secondItem="qbg-QG-DZ2" secondAttribute="centerY" id="YmF-1b-SPs"/>
+                    <constraint firstItem="4fM-BC-VeJ" firstAttribute="top" secondItem="qbg-QG-DZ2" secondAttribute="bottom" constant="7.5" id="Ysg-jT-187"/>
+                    <constraint firstItem="Lzu-kR-mio" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="gH2-Om-9qI"/>
+                    <constraint firstItem="qbg-QG-DZ2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-20" id="gl5-fW-AQK"/>
+                    <constraint firstItem="Lzu-kR-mio" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="i5G-6i-BJO"/>
+                    <constraint firstItem="qbg-QG-DZ2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="7.5" id="oz8-Ia-etI"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="activityIndicator" destination="4fM-BC-VeJ" id="T9S-pN-CAx"/>
                 <outlet property="avatarImageView" destination="Lzu-kR-mio" id="4iE-H1-gkO"/>
             </connections>
-            <point key="canvasLocation" x="-489" y="100"/>
+            <point key="canvasLocation" x="-489.13043478260875" y="114.50892857142857"/>
         </tableViewCell>
     </objects>
     <resources>
