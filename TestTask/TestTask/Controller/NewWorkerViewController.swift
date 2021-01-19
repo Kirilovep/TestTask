@@ -132,7 +132,15 @@ extension NewWorkerViewController: SaveCellDelegate {
         let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
-        //fetch the dataSource object using index
+        
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let workerEntity = WorkerEntity(context: context)
+        workerEntity.name = profileData.name
+        workerEntity.secondName = profileData.surName
+        workerEntity.birthday = profileData.birthDay
+        workerEntity.company = nameOfCompany
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
     }
 }
 
