@@ -16,8 +16,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your date of birthday" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z5Z-xq-Eau">
-                        <rect key="frame" x="20" y="7" width="300" height="36"/>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите вашу дату рождения" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z5Z-xq-Eau">
+                        <rect key="frame" x="15" y="7" width="305" height="36"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                     </textField>
@@ -25,7 +25,7 @@
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="Z5Z-xq-Eau" secondAttribute="trailing" id="Hmt-et-IZC"/>
                     <constraint firstAttribute="bottom" secondItem="Z5Z-xq-Eau" secondAttribute="bottom" constant="7" id="LWY-4u-50P"/>
-                    <constraint firstItem="Z5Z-xq-Eau" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="U4f-hN-dZ5"/>
+                    <constraint firstItem="Z5Z-xq-Eau" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="U4f-hN-dZ5"/>
                     <constraint firstItem="Z5Z-xq-Eau" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="f74-dW-fO1"/>
                 </constraints>
             </tableViewCellContentView>

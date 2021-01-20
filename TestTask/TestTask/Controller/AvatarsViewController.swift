@@ -32,10 +32,10 @@ class AvatarsViewController: UIViewController {
     
     //MARK: - Functions -
     private func loadPhotos() {
-        NetworkManager.shared.loadPhotosFromAlbum { (photos) in
+        NetworkManager.shared.loadPhotosFromAlbum { [weak self](photos) in
             DispatchQueue.main.async {
-                self.photosFromAlbum = photos
-                self.mainCollectionView.reloadData()
+                self?.photosFromAlbum = photos
+                self?.mainCollectionView.reloadData()
             }
         }
     }

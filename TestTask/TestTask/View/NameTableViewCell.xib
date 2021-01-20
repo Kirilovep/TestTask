@@ -16,8 +16,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="373" height="50"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8BD-Ze-R71">
-                        <rect key="frame" x="20" y="7" width="353" height="36"/>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите ваше имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8BD-Ze-R71">
+                        <rect key="frame" x="15" y="7" width="358" height="36"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                     </textField>
@@ -25,15 +25,15 @@
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="8BD-Ze-R71" secondAttribute="trailing" id="K8y-2e-npb"/>
                     <constraint firstAttribute="bottom" secondItem="8BD-Ze-R71" secondAttribute="bottom" constant="7" id="bVk-fn-vEa"/>
+                    <constraint firstItem="8BD-Ze-R71" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="mpg-tO-8eA"/>
                     <constraint firstItem="8BD-Ze-R71" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="wFd-gl-DkI"/>
-                    <constraint firstItem="8BD-Ze-R71" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="xYj-qm-CUN"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="nameTextField" destination="8BD-Ze-R71" id="Jaw-fG-vgV"/>
             </connections>
-            <point key="canvasLocation" x="-552.89855072463774" y="16.071428571428569"/>
+            <point key="canvasLocation" x="-552.89855072463774" y="15.401785714285714"/>
         </tableViewCell>
     </objects>
 </document>

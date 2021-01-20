@@ -16,17 +16,17 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your surname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5gR-mh-aye">
-                        <rect key="frame" x="20" y="5" width="300" height="40"/>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите вашу фамилию" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5gR-mh-aye">
+                        <rect key="frame" x="15" y="5" width="305" height="40"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                     </textField>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="5gR-mh-aye" secondAttribute="bottom" constant="5" id="5Mq-xu-ten"/>
+                    <constraint firstItem="5gR-mh-aye" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="8Jg-fN-r7N"/>
                     <constraint firstAttribute="trailing" secondItem="5gR-mh-aye" secondAttribute="trailing" id="Ewi-I1-o1i"/>
                     <constraint firstItem="5gR-mh-aye" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="PcI-FY-CMt"/>
-                    <constraint firstItem="5gR-mh-aye" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="lvW-k0-pkt"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
