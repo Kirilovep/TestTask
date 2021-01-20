@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct ProfileData {
     var name: String?
     var surName: String?

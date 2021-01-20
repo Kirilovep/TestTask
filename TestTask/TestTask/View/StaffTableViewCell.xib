@@ -16,50 +16,60 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8M3-k8-rvd">
-                        <rect key="frame" x="16" y="12" width="50" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8M3-k8-rvd">
+                        <rect key="frame" x="85" y="12" width="38" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFK-Kk-ylG">
-                        <rect key="frame" x="74" y="12" width="42.5" height="21"/>
+                        <rect key="frame" x="131" y="12" width="42.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Surname:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Tc-fg-Kak">
-                        <rect key="frame" x="16" y="41" width="73" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фамилия:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Tc-fg-Kak">
+                        <rect key="frame" x="85" y="41" width="77.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9S-Oi-2ya">
-                        <rect key="frame" x="97" y="41" width="42" height="21"/>
+                        <rect key="frame" x="170.5" y="41" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z5s-E0-04R">
+                        <rect key="frame" x="7" y="2" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="z5s-E0-04R" secondAttribute="height" multiplier="1:1" id="52E-HY-i6a"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="7Tc-fg-Kak" firstAttribute="leading" secondItem="z5s-E0-04R" secondAttribute="trailing" constant="8" symbolic="YES" id="4Kg-R6-5ZW"/>
                     <constraint firstItem="vFK-Kk-ylG" firstAttribute="centerY" secondItem="8M3-k8-rvd" secondAttribute="centerY" id="5vd-Kb-Ape"/>
                     <constraint firstAttribute="bottom" secondItem="7Tc-fg-Kak" secondAttribute="bottom" constant="13" id="88w-7e-wAy"/>
+                    <constraint firstItem="z5s-E0-04R" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="F2V-zR-4eb"/>
                     <constraint firstItem="g9S-Oi-2ya" firstAttribute="leading" secondItem="7Tc-fg-Kak" secondAttribute="trailing" constant="8" symbolic="YES" id="FYZ-IF-LtQ"/>
                     <constraint firstItem="7Tc-fg-Kak" firstAttribute="top" secondItem="8M3-k8-rvd" secondAttribute="bottom" constant="8" symbolic="YES" id="JLi-aQ-h8b"/>
                     <constraint firstItem="g9S-Oi-2ya" firstAttribute="centerY" secondItem="7Tc-fg-Kak" secondAttribute="centerY" id="L5s-V1-RVS"/>
                     <constraint firstItem="vFK-Kk-ylG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Rjb-4g-o5D"/>
-                    <constraint firstItem="8M3-k8-rvd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="e59-FX-faM"/>
+                    <constraint firstAttribute="bottom" secondItem="z5s-E0-04R" secondAttribute="bottom" constant="3" id="S0a-hx-deK"/>
+                    <constraint firstItem="8M3-k8-rvd" firstAttribute="leading" secondItem="z5s-E0-04R" secondAttribute="trailing" constant="8" symbolic="YES" id="SXl-8W-5eu"/>
+                    <constraint firstItem="z5s-E0-04R" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="7" id="VXN-WR-s9J"/>
                     <constraint firstItem="vFK-Kk-ylG" firstAttribute="leading" secondItem="8M3-k8-rvd" secondAttribute="trailing" constant="8" symbolic="YES" id="f4v-Oq-C8d"/>
                     <constraint firstItem="8M3-k8-rvd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="lTv-Gu-j6b"/>
-                    <constraint firstItem="7Tc-fg-Kak" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="zq9-gJ-fIA"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="avatarImageView" destination="z5s-E0-04R" id="YTD-tK-A3r"/>
                 <outlet property="nameLabel" destination="vFK-Kk-ylG" id="Zwn-l9-n4F"/>
                 <outlet property="surnameLabel" destination="g9S-Oi-2ya" id="0cR-Q9-EV2"/>
             </connections>
-            <point key="canvasLocation" x="118.84057971014494" y="90.066964285714278"/>
+            <point key="canvasLocation" x="121.73913043478262" y="74.665178571428569"/>
         </tableViewCell>
     </objects>
 </document>

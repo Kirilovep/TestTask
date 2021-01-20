@@ -8,22 +8,23 @@
 import UIKit
 
 class SecondTableViewController: UITableViewController {
-
+    
+    //MARK:- Properties -
     var companiesFromCoreData: [Companies] = []
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
     var onFinish: ((String) -> ())?
     
+    //MARK:- LifeCycle -
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getDataFromCoreData()
     }
-    
+    //MARK:- Functions
     private func getDataFromCoreData() {
         do {
             companiesFromCoreData = try context.fetch(Companies.fetchRequest())
@@ -33,7 +34,7 @@ class SecondTableViewController: UITableViewController {
         }
     }
     
-    func addAlert() {
+    private func addAlert() {
         let alert = UIAlertController(title: "Add new company", message: "", preferredStyle: .alert)
         alert.addTextField { (companyNameField) in
             companyNameField.font = .systemFont(ofSize: 17)
@@ -62,11 +63,7 @@ class SecondTableViewController: UITableViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    @IBAction func buttonPress(_ sender: UIBarButtonItem) {
-        addAlert()
-    }
-    
-    func showNotCorrectAlert() {
+    private func showNotCorrectAlert() {
         let alert = UIAlertController(title: "Error!", message: "Name empty", preferredStyle: .alert)
         let tryAction = UIAlertAction(title: "Try again", style: .default) { (_) in
             self.addAlert()
@@ -78,20 +75,21 @@ class SecondTableViewController: UITableViewController {
         
     }
     
+    //MARK:- IBActions
+    @IBAction func buttonPress(_ sender: UIBarButtonItem) {
+        addAlert()
+    }
     
-    // MARK: - Table view data source
-
-
+    //MARK:- Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return companiesFromCoreData.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        
         cell.textLabel?.text = companiesFromCoreData[indexPath.row].companie
-         
+        
         return cell
     }
     
@@ -102,13 +100,11 @@ class SecondTableViewController: UITableViewController {
         }
     }
     
-    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let task = companiesFromCoreData[indexPath.row]
             context.delete(task)
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
-            
             do {
                 companiesFromCoreData = try context.fetch(Companies.fetchRequest())
             } catch {
@@ -117,5 +113,4 @@ class SecondTableViewController: UITableViewController {
         }
         tableView.reloadData()
     }
-    
 }

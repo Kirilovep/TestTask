@@ -9,21 +9,22 @@ import UIKit
 
 class NewWorkerViewController: UITableViewController {
     
+    
+    //MARK:- Properties -
     var data: [CellsData] = []
     var profileData = ProfileData()
-    var nameOfCompany: String = ""
     var savedImageView = UIImageView()
     
-    
+    //MARK:- LifeCycle -
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationController?.navigationBar.prefersLargeTitles = false
         registerTableViewCells()
         createCellsData()
     }
     
-    
-    func createCellsData() {
+    //MARK:- Functions -
+    private func createCellsData() {
         data.append(CellsData(type: .image, data: UIImage()))
         data.append(CellsData(type: .textInput, data: "Name"))
         data.append(CellsData(type: .textInput, data: "SurName"))
@@ -32,7 +33,7 @@ class NewWorkerViewController: UITableViewController {
         data.append(CellsData(type: .button, data: "Save"))
     }
     
-    func registerTableViewCells() {
+    private func registerTableViewCells() {
         
         let avatarNib = UINib(nibName: "PhotoTableViewCell", bundle: nil)
         let nameNib = UINib(nibName: "NameTableViewCell", bundle: nil)
@@ -51,11 +52,9 @@ class NewWorkerViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -63,12 +62,10 @@ class NewWorkerViewController: UITableViewController {
         switch currentData.type {
         case .image:
             let cell = tableView.dequeueReusableCell(withIdentifier: "photoCell") as! PhotoTableViewCell
-            cell.delegate = self
+            //cell.delegate = self
             if let newImage = cell.avatarImageView?.image {
                 savedImageView.image = newImage
-                //print(savedImageView.image)
             }
-            
             
             return cell
         case .textInput:
@@ -118,27 +115,15 @@ class NewWorkerViewController: UITableViewController {
             vc.onFinish = { (backNameOfCompany) in
                 self.profileData.company = backNameOfCompany
                 tableView.reloadData()
-                print(self.nameOfCompany)
             }
             navigationController?.pushViewController(vc, animated: true)
         default:
             break
         }
-        
-        
     }
-    
 }
 
-extension NewWorkerViewController: PhotoCellDelegate {
-    func buttonPressed(cell: PhotoTableViewCell) {
-        tableView.reloadData()
-    }
-    
-    
-}
-
-
+//MARK:- Extensions
 extension NewWorkerViewController: SaveCellDelegate {
     func sharePressed(cell: SaveTableViewCell) {
         //guard let index = tableView.indexPath(for: cell)?.row else { return }
@@ -151,7 +136,7 @@ extension NewWorkerViewController: SaveCellDelegate {
             workerEntity.birthday = birthday
             workerEntity.company = company
             if let imageData = savedImageView.image?.pngData() {
-                workerEntity.newImage = imageData
+                workerEntity.imageData = imageData
             }
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
             
@@ -169,14 +154,10 @@ extension NewWorkerViewController: SaveCellDelegate {
             present(alert, animated: true, completion: nil)
             
         }
-        
-        
     }
 }
 
 extension NewWorkerViewController : UITextFieldDelegate {
-    
-    
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.addTarget(self, action: #selector(valueChanged), for: .editingChanged)
@@ -196,7 +177,5 @@ extension NewWorkerViewController : UITextFieldDelegate {
                 break
             }
         }
-        
-        
     }
 }

@@ -16,38 +16,36 @@
                 <rect key="frame" x="0.0" y="0.0" width="361" height="200"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Lzu-kR-mio">
+                        <rect key="frame" x="80" y="1" width="200" height="155.5"/>
+                    </imageView>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="4fM-BC-VeJ">
+                        <rect key="frame" x="162" y="163" width="37" height="37"/>
+                    </activityIndicatorView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbg-QG-DZ2">
-                        <rect key="frame" x="0.0" y="18.5" width="361" height="138"/>
-                        <state key="normal" title="Your avatar click!"/>
+                        <rect key="frame" x="20" y="11" width="321" height="152"/>
                         <connections>
                             <action selector="buttonPress:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="urK-vG-Ltj"/>
                         </connections>
                     </button>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lzu-kR-mio">
-                        <rect key="frame" x="93" y="0.0" width="175" height="175"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="Lzu-kR-mio" secondAttribute="height" multiplier="1:1" id="uKl-RD-Nuf"/>
-                        </constraints>
-                    </imageView>
-                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="4fM-BC-VeJ">
-                        <rect key="frame" x="162" y="164" width="37" height="36"/>
-                    </activityIndicatorView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="Lzu-kR-mio" secondAttribute="bottom" constant="25" id="FQD-Qh-ycw"/>
-                    <constraint firstItem="Lzu-kR-mio" firstAttribute="centerX" secondItem="qbg-QG-DZ2" secondAttribute="centerX" id="Gg2-V1-1Xp"/>
+                    <constraint firstItem="Lzu-kR-mio" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="06c-Js-dLj"/>
+                    <constraint firstItem="qbg-QG-DZ2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="7Wn-3y-nxX"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="qbg-QG-DZ2" secondAttribute="trailing" id="CRc-f4-e3B"/>
+                    <constraint firstItem="4fM-BC-VeJ" firstAttribute="top" secondItem="qbg-QG-DZ2" secondAttribute="bottom" id="Gev-qN-RPb"/>
                     <constraint firstAttribute="trailing" secondItem="4fM-BC-VeJ" secondAttribute="trailing" constant="162" id="Mtj-41-ELH"/>
                     <constraint firstAttribute="bottom" secondItem="4fM-BC-VeJ" secondAttribute="bottom" id="PpD-As-XHv"/>
                     <constraint firstItem="4fM-BC-VeJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="162" id="QBX-fM-NJT"/>
-                    <constraint firstItem="Lzu-kR-mio" firstAttribute="centerY" secondItem="qbg-QG-DZ2" secondAttribute="centerY" id="YmF-1b-SPs"/>
-                    <constraint firstItem="4fM-BC-VeJ" firstAttribute="top" secondItem="qbg-QG-DZ2" secondAttribute="bottom" constant="7.5" id="Ysg-jT-187"/>
-                    <constraint firstItem="Lzu-kR-mio" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="gH2-Om-9qI"/>
-                    <constraint firstItem="qbg-QG-DZ2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-20" id="gl5-fW-AQK"/>
-                    <constraint firstItem="Lzu-kR-mio" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="i5G-6i-BJO"/>
-                    <constraint firstItem="qbg-QG-DZ2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="7.5" id="oz8-Ia-etI"/>
+                    <constraint firstItem="qbg-QG-DZ2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="awY-Hu-dwd"/>
+                    <constraint firstItem="4fM-BC-VeJ" firstAttribute="top" secondItem="Lzu-kR-mio" secondAttribute="bottom" constant="5" id="rAO-kO-FtY"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <constraints>
+                <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="Lzu-kR-mio" secondAttribute="trailing" constant="81" id="QeX-KR-D0r"/>
+                <constraint firstItem="Lzu-kR-mio" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" constant="80" id="yTA-9b-t2u"/>
+            </constraints>
             <connections>
                 <outlet property="activityIndicator" destination="4fM-BC-VeJ" id="T9S-pN-CAx"/>
                 <outlet property="avatarImageView" destination="Lzu-kR-mio" id="4iE-H1-gkO"/>
@@ -55,4 +53,7 @@
             <point key="canvasLocation" x="-489.13043478260875" y="114.50892857142857"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="person.crop.square" catalog="system" width="128" height="114"/>
+    </resources>
 </document>

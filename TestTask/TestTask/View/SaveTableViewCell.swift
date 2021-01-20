@@ -13,21 +13,19 @@ protocol SaveCellDelegate: class {
 
 class SaveTableViewCell: UITableViewCell {
 
+    //MARK:- Properties -
     var delegate : SaveCellDelegate?
     
+    //MARK:- IBOutlets -
     @IBOutlet weak var saveButton: UIButton!
+    
+    //MARK:- LifeCycle -
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
-
     
+    //MARK:- IBActions -
     @IBAction func buttonPress(_ sender: UIButton) {
         delegate?.sharePressed(cell: self)
-
     }
-    
-    
-    
 }
