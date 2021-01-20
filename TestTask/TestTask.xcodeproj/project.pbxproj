@@ -33,6 +33,9 @@
 		BE5BB45C25B8694B001DC1CC /* AvatarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5BB45B25B8694B001DC1CC /* AvatarsViewController.swift */; };
 		BE5BB46125B869A8001DC1CC /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5BB45F25B869A8001DC1CC /* PhotosCollectionViewCell.swift */; };
 		BE5BB46225B869A8001DC1CC /* PhotosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE5BB46025B869A8001DC1CC /* PhotosCollectionViewCell.xib */; };
+		BE5BB46B25B87F23001DC1CC /* DetailInfoCompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5BB46A25B87F23001DC1CC /* DetailInfoCompanyViewController.swift */; };
+		BE5BB47025B88007001DC1CC /* DetailCompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5BB46E25B88007001DC1CC /* DetailCompanyTableViewCell.swift */; };
+		BE5BB47125B88007001DC1CC /* DetailCompanyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE5BB46F25B88007001DC1CC /* DetailCompanyTableViewCell.xib */; };
 		BE5F4C6C25B718D700EB5B8F /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4C6B25B718D700EB5B8F /* Enums.swift */; };
 		BE5F4C7225B7190000EB5B8F /* CellsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4C7125B7190000EB5B8F /* CellsData.swift */; };
 		BE5F4C7B25B71B5300EB5B8F /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F4C7925B71B5300EB5B8F /* PhotoTableViewCell.swift */; };
@@ -73,6 +76,9 @@
 		BE5BB45B25B8694B001DC1CC /* AvatarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarsViewController.swift; sourceTree = "<group>"; };
 		BE5BB45F25B869A8001DC1CC /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		BE5BB46025B869A8001DC1CC /* PhotosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosCollectionViewCell.xib; sourceTree = "<group>"; };
+		BE5BB46A25B87F23001DC1CC /* DetailInfoCompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoCompanyViewController.swift; sourceTree = "<group>"; };
+		BE5BB46E25B88007001DC1CC /* DetailCompanyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCompanyTableViewCell.swift; sourceTree = "<group>"; };
+		BE5BB46F25B88007001DC1CC /* DetailCompanyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCompanyTableViewCell.xib; sourceTree = "<group>"; };
 		BE5F4C6B25B718D700EB5B8F /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		BE5F4C7125B7190000EB5B8F /* CellsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsData.swift; sourceTree = "<group>"; };
 		BE5F4C7925B71B5300EB5B8F /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
@@ -158,6 +164,8 @@
 				BE4F4AE525B7616A00D4E4D0 /* StaffTableViewCell.xib */,
 				BE5BB45F25B869A8001DC1CC /* PhotosCollectionViewCell.swift */,
 				BE5BB46025B869A8001DC1CC /* PhotosCollectionViewCell.xib */,
+				BE5BB46E25B88007001DC1CC /* DetailCompanyTableViewCell.swift */,
+				BE5BB46F25B88007001DC1CC /* DetailCompanyTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,6 +204,7 @@
 				BE4F4ADA25B75E8A00D4E4D0 /* ListStaffViewController.swift */,
 				BE4F4AEB25B77E3300D4E4D0 /* DetailViewController.swift */,
 				BE5BB45B25B8694B001DC1CC /* AvatarsViewController.swift */,
+				BE5BB46A25B87F23001DC1CC /* DetailInfoCompanyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -290,6 +299,7 @@
 				BE5BB46225B869A8001DC1CC /* PhotosCollectionViewCell.xib in Resources */,
 				BE4C959125B5E2DD00EB2E96 /* SurNameTableViewCell.xib in Resources */,
 				BE4C956B25B5DA0D00EB2E96 /* Assets.xcassets in Resources */,
+				BE5BB47125B88007001DC1CC /* DetailCompanyTableViewCell.xib in Resources */,
 				BE4C959C25B5E35600EB2E96 /* CompanyTableViewCell.xib in Resources */,
 				BE4C95A125B5E3C900EB2E96 /* SaveTableViewCell.xib in Resources */,
 				BE4C956925B5DA0C00EB2E96 /* Main.storyboard in Resources */,
@@ -354,6 +364,7 @@
 				BE5F4C8C25B72B5B00EB5B8F /* WorkerEntity.xcdatamodeld in Sources */,
 				BE4F4AE625B7616A00D4E4D0 /* StaffTableViewCell.swift in Sources */,
 				BE5BB46125B869A8001DC1CC /* PhotosCollectionViewCell.swift in Sources */,
+				BE5BB46B25B87F23001DC1CC /* DetailInfoCompanyViewController.swift in Sources */,
 				BE5BB45125B8685A001DC1CC /* PhotoModel.swift in Sources */,
 				BE5F4C8025B71E2400EB5B8F /* SecondTableViewController.swift in Sources */,
 				BE4C956225B5DA0C00EB2E96 /* AppDelegate.swift in Sources */,
@@ -367,6 +378,7 @@
 				BE5F4C8725B7265E00EB5B8F /* ProfileData.swift in Sources */,
 				BE4C959625B5E31D00EB2E96 /* BirthDayTableViewCell.swift in Sources */,
 				BE5F4C6C25B718D700EB5B8F /* Enums.swift in Sources */,
+				BE5BB47025B88007001DC1CC /* DetailCompanyTableViewCell.swift in Sources */,
 				BE5BB45C25B8694B001DC1CC /* AvatarsViewController.swift in Sources */,
 				BE4C959B25B5E35600EB2E96 /* CompanyTableViewCell.swift in Sources */,
 				BE5F4C7B25B71B5300EB5B8F /* PhotoTableViewCell.swift in Sources */,

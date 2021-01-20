@@ -13,7 +13,7 @@ class SecondTableViewController: UITableViewController {
     var companiesFromCoreData: [CompanyEntity] = []
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var onFinish: ((CompanyEntity) -> ())?
-    
+    var fromNewWorkerVC: Bool?
     //MARK:- LifeCycle -
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,9 +94,17 @@ class SecondTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigationController?.popViewController(animated: true)
-        if let finish = self.onFinish {
-            finish(self.companiesFromCoreData[indexPath.row])
+        
+        if fromNewWorkerVC == true {
+            navigationController?.popViewController(animated: true)
+            
+            if let finish = self.onFinish {
+                finish(self.companiesFromCoreData[indexPath.row])
+            }
+        } else {
+            let vc = storyboard?.instantiateViewController(withIdentifier: VCIdentifiers.detailCompaniesVC.rawValue) as! DetailInfoCompanyViewController
+            vc.bringId = indexPath.row
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
     

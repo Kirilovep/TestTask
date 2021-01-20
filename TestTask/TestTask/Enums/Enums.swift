@@ -35,6 +35,7 @@ enum TableViewNibIdentifiers: String {
     case saveTableNibCell = "SaveTableViewCell"
     case staffTableNibCell = "StaffTableViewCell"
     case photosTableNibCell = "PhotosCollectionViewCell"
+    case detailCompanyTableNibCell = "DetailCompanyTableViewCell"
 }
 
 enum TableViewCellsIdentifiers: String  {
@@ -47,6 +48,7 @@ enum TableViewCellsIdentifiers: String  {
     case defaultCell = "reuseIdentifier"
     case idStaffCell = "staffCell"
     case idPhotosCell = "photosCell"
+    case idCompaniesCell = "companiesCell"
 }
 
 enum VCIdentifiers: String {
@@ -54,4 +56,5 @@ enum VCIdentifiers: String {
     case avatarsVC = "avatarsVC"
     case newWorkerVC = "newWorkerVC"
     case detailVC = "detailVC"
+    case detailCompaniesVC = "detailCompaniesVC"
 }

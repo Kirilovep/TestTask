@@ -114,6 +114,7 @@ class NewWorkerViewController: UITableViewController {
         switch currentData.type {
         case .label:
             let vc = storyboard?.instantiateViewController(identifier: VCIdentifiers.secondVC.rawValue) as! SecondTableViewController
+            vc.fromNewWorkerVC = true
             vc.onFinish = { (backCompany) in
                 self.profileData.hisCompany = backCompany
                 tableView.reloadData()

@@ -73,7 +73,7 @@ extension ListStaffViewController: UITableViewDataSource, UITableViewDelegate {
         vc.name = listWorkers[indexPath.row].name
         vc.surname = listWorkers[indexPath.row].secondName
         vc.birthday = listWorkers[indexPath.row].birthday
-        vc.company = listWorkers[indexPath.row].company
+        vc.company = listWorkers[indexPath.row].hisCompany?.name
         vc.detailImage = listWorkers[indexPath.row].imageData
         
         navigationController?.pushViewController(vc, animated: true)

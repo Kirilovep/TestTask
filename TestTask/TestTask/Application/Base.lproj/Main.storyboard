@@ -235,6 +235,36 @@
             </objects>
             <point key="canvasLocation" x="1424.6376811594205" y="-441.29464285714283"/>
         </scene>
+        <!--Detail Info Company View Controller-->
+        <scene sceneID="y7H-mX-uuR">
+            <objects>
+                <viewController storyboardIdentifier="detailCompaniesVC" id="nxB-Vd-rCN" customClass="DetailInfoCompanyViewController" customModule="TestTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jId-9i-t9X">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dIW-Lu-agA">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Mb-CV-RKE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="dIW-Lu-agA" secondAttribute="bottom" id="cWY-g0-Un0"/>
+                            <constraint firstItem="dIW-Lu-agA" firstAttribute="trailing" secondItem="2Mb-CV-RKE" secondAttribute="trailing" id="i5u-eI-5OT"/>
+                            <constraint firstItem="dIW-Lu-agA" firstAttribute="leading" secondItem="2Mb-CV-RKE" secondAttribute="leading" id="k9e-Os-Dmb"/>
+                            <constraint firstItem="dIW-Lu-agA" firstAttribute="top" secondItem="2Mb-CV-RKE" secondAttribute="top" id="tVB-eT-1ee"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailTableView" destination="dIW-Lu-agA" id="KA7-yh-bHI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gFK-cH-3Io" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2221.739130434783" y="-441.29464285714283"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="29W-aa-gal">
             <objects>
