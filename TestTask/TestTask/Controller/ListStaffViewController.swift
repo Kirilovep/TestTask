@@ -19,8 +19,8 @@ class ListStaffViewController: UIViewController {
             listStaffTableView.delegate = self
             listStaffTableView.dataSource = self
             
-            let nib = UINib(nibName: "StaffTableViewCell", bundle: nil)
-            listStaffTableView.register(nib, forCellReuseIdentifier: "staffCell")
+            let nib = UINib(nibName: TableViewNibIdentifiers.staffTableNibCell.rawValue, bundle: nil)
+            listStaffTableView.register(nib, forCellReuseIdentifier: TableViewCellsIdentifiers.idStaffCell.rawValue)
             listStaffTableView.rowHeight = 70
         }
     }
@@ -33,7 +33,6 @@ class ListStaffViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getDataFromCoreData()
-        print(listWorkers)
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
@@ -49,7 +48,7 @@ class ListStaffViewController: UIViewController {
     
     //MARK:- IBActions -
     @IBAction func buttonPress(_ sender: UIBarButtonItem) {
-        let vc = storyboard?.instantiateViewController(identifier: "newWorkerVC") as! NewWorkerViewController
+        let vc = storyboard?.instantiateViewController(identifier: VCIdentifiers.newWorkerVC.rawValue) as! NewWorkerViewController
         
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -63,15 +62,14 @@ extension ListStaffViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "staffCell", for: indexPath) as! StaffTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellsIdentifiers.idStaffCell.rawValue, for: indexPath) as! StaffTableViewCell
         
         cell.configure(result: listWorkers[indexPath.row])
-        //cell.countLabel.text = "\(indexPath.row + 1)"
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = storyboard?.instantiateViewController(identifier: "detailVC") as! DetailViewController
+        let vc = storyboard?.instantiateViewController(identifier: VCIdentifiers.detailVC.rawValue) as! DetailViewController
         vc.name = listWorkers[indexPath.row].name
         vc.surname = listWorkers[indexPath.row].secondName
         vc.birthday = listWorkers[indexPath.row].birthday

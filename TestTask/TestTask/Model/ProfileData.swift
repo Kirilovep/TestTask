@@ -12,4 +12,5 @@ struct ProfileData {
     var surName: String?
     var birthDay: String?
     var company: String?
+    var hisCompany: CompanyEntity?
 }

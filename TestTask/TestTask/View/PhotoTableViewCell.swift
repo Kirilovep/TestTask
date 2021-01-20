@@ -6,25 +6,35 @@
 //
 
 import UIKit
+import Kingfisher
+protocol PhotoCellDelegate: class {
+    func sharePressed(cell: PhotoTableViewCell)
+}
 
 class PhotoTableViewCell: UITableViewCell {
     
     //MARK: - Properties -
     var newImageView: UIImageView?
-    
+    var delegate : PhotoCellDelegate?
     //MARK:- IBOutlets -
     @IBOutlet weak var avatarImageView: UIImageView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+
     
     //MARK:- LifeCycle -
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
+    //MARK:- Functions -
+    func configure(resultId: String, resultSecret: String) {
+        let urlPhoto = "\(HelperUrl.loadPhotoUrl.rawValue)0/\(resultId)_\(resultSecret)_b.jpg"
+        let photoUrl = URL(string: urlPhoto)
+        avatarImageView.kf.indicatorType = .activity
+        avatarImageView.kf.setImage(with: photoUrl, placeholder: UIImage(named: "placeholder"))
+    }
+    
     //MARK:- IBActions -
     @IBAction func buttonPress(_ sender: UIButton) {
-        if let imageUrl = URL(string: "https://picsum.photos/200") {
-            self.avatarImageView.load(url: imageUrl, indicator: activityIndicator)
-        }
+        delegate?.sharePressed(cell: self)
     }
 }

@@ -16,10 +16,42 @@ enum DataType {
 
 
 enum TextFieldData: Int {
-    
     case nameTextField = 1
     case surnameTextField
     case birthDayTextField
+}
 
-    
+enum HelperUrl: String {
+    case loadPhotoUrl = "https://live.staticflickr.com/"
+}
+
+
+enum TableViewNibIdentifiers: String {
+    case photoTableNibCell = "PhotoTableViewCell"
+    case nameTableNibCell = "NameTableViewCell"
+    case surNameTableNibCell = "SurNameTableViewCell"
+    case birthdayTableNibCell = "BirthDayTableViewCell"
+    case companyTableNibCell = "CompanyTableViewCell"
+    case saveTableNibCell = "SaveTableViewCell"
+    case staffTableNibCell = "StaffTableViewCell"
+    case photosTableNibCell = "PhotosCollectionViewCell"
+}
+
+enum TableViewCellsIdentifiers: String  {
+    case idPhotoCell = "photoCell"
+    case idNameCell = "nameCell"
+    case idSurNameCell = "surNameCell"
+    case idBirthdayCell = "birthDayCell"
+    case idCompanyCell = "companyCell"
+    case idSaveCell = "saveCell"
+    case defaultCell = "reuseIdentifier"
+    case idStaffCell = "staffCell"
+    case idPhotosCell = "photosCell"
+}
+
+enum VCIdentifiers: String {
+    case secondVC = "secondVC"
+    case avatarsVC = "avatarsVC"
+    case newWorkerVC = "newWorkerVC"
+    case detailVC = "detailVC"
 }

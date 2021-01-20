@@ -8,15 +8,21 @@
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
+    <entity name="CompanyEntity" representedClassName="CompanyEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="employees" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WorkerEntity" inverseName="hisCompany" inverseEntity="WorkerEntity"/>
+    </entity>
     <entity name="WorkerEntity" representedClassName="WorkerEntity" syncable="YES" codeGenerationType="class">
         <attribute name="birthday" optional="YES" attributeType="String"/>
         <attribute name="company" optional="YES" attributeType="String"/>
         <attribute name="imageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="secondName" optional="YES" attributeType="String"/>
+        <relationship name="hisCompany" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CompanyEntity" inverseName="employees" inverseEntity="CompanyEntity"/>
     </entity>
     <elements>
         <element name="Companies" positionX="-63" positionY="27" width="128" height="58"/>
-        <element name="WorkerEntity" positionX="-401.6640625" positionY="59.5859375" width="128" height="118"/>
+        <element name="WorkerEntity" positionX="-401.6640625" positionY="59.5859375" width="128" height="133"/>
+        <element name="CompanyEntity" positionX="-234" positionY="81" width="128" height="73"/>
     </elements>
 </model>

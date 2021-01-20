@@ -10,9 +10,9 @@ import UIKit
 class SecondTableViewController: UITableViewController {
     
     //MARK:- Properties -
-    var companiesFromCoreData: [Companies] = []
+    var companiesFromCoreData: [CompanyEntity] = []
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var onFinish: ((String) -> ())?
+    var onFinish: ((CompanyEntity) -> ())?
     
     //MARK:- LifeCycle -
     override func viewDidLoad() {
@@ -27,7 +27,7 @@ class SecondTableViewController: UITableViewController {
     //MARK:- Functions
     private func getDataFromCoreData() {
         do {
-            companiesFromCoreData = try context.fetch(Companies.fetchRequest())
+            companiesFromCoreData = try context.fetch(CompanyEntity.fetchRequest())
             tableView.reloadData()
         } catch {
             print("Fetching Failed!")
@@ -48,9 +48,9 @@ class SecondTableViewController: UITableViewController {
                     return
                 } else {
                     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-                    let companies = Companies(context: context)
+                    let companies = CompanyEntity(context: context)
                     
-                    companies.companie = textField
+                    companies.name = textField
                     (UIApplication.shared.delegate as! AppDelegate).saveContext()
                     self.getDataFromCoreData()
                 }
@@ -86,9 +86,9 @@ class SecondTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellsIdentifiers.defaultCell.rawValue, for: indexPath)
         
-        cell.textLabel?.text = companiesFromCoreData[indexPath.row].companie
+        cell.textLabel?.text = companiesFromCoreData[indexPath.row].name
         
         return cell
     }
@@ -96,7 +96,7 @@ class SecondTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         navigationController?.popViewController(animated: true)
         if let finish = self.onFinish {
-            finish(self.companiesFromCoreData[indexPath.row].companie ?? "default")
+            finish(self.companiesFromCoreData[indexPath.row])
         }
     }
     
@@ -106,7 +106,7 @@ class SecondTableViewController: UITableViewController {
             context.delete(task)
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
             do {
-                companiesFromCoreData = try context.fetch(Companies.fetchRequest())
+                companiesFromCoreData = try context.fetch(CompanyEntity.fetchRequest())
             } catch {
                 print("Fetching Failed")
             }
